@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -34,6 +35,10 @@ namespace RuntimeDeveloperConsole {
         {
             if (eventCamera == null)
                 eventCamera = Camera.main;
+
+            if(EventSystem.current == null)
+                new GameObject("Event System").AddComponent<EventSystem>()
+                                              .AddComponent<StandaloneInputModule>();
 
             panelParent.gameObject.SetActive(false);
             closeButton.onClick.RemoveAllListeners();
