@@ -10,9 +10,11 @@ namespace RuntimeDeveloperConsole
         /// <summary>
         /// prints a message to console
         /// </summary>
-        public void PrintLineToConsole(string message)
-        {
+        public void PrintLineToConsole(string message);
 
-        }
+        /// <summary>
+        /// Clear console window
+        /// </summary>
+        public void Clear();
     }
 }

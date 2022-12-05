@@ -530,6 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layoutToRebuild: {fileID: 3890140741710095013}
+  scrollView: {fileID: 3890140741051437054}
   inputField: {fileID: 3890140742504153751}
   consoleOutput: {fileID: 3890140741047295504}
 --- !u!1 &3890140740981105763

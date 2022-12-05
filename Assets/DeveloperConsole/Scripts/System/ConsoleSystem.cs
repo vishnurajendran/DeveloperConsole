@@ -39,6 +39,13 @@ namespace RuntimeDeveloperConsole
             consoleWindow.PrintLineToConsole(string.Format(msg, message));
         }
 
+        public static void ClearConsoleWindow()
+        {
+            if (consoleWindow == null) return;
+
+            consoleWindow.Clear();
+        }
+
         public static void HandleCommand(string commandString)
         {
             if(string.IsNullOrEmpty(commandString)) {

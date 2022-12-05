@@ -16,5 +16,20 @@ namespace RuntimeDeveloperConsole
 
         public const string TOO_MANY_ARGS_TEXT = "Too many arguments provided than specified";
         public const string TOO_FEW_ARGS_TEXT = "Too few arguments provided than specified";
+
+        public const string SystemInfoString = @"<color=#00FFFF>-- Stats --        
+          [Basic]
+          DeviceModel: {0}
+          DeviceName : {1}
+          DeviceType : {2}
+          
+          [CPU]
+          Proccessors: {3}
+          Memory     : {4}
+    
+          [GPU]
+          GPU Device : {5}
+          GPU Memory : {6} 
+          API        : {7}</color>";
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 namespace RuntimeDeveloperConsole {
     public class CommandDatabase
     {
-        private static Dictionary<string, MethodInfo> registeredCommands;
+        private static SortedDictionary<string, MethodInfo> registeredCommands;
 
         [RuntimeInitializeOnLoadMethod]
         private static void Initialise()
@@ -15,7 +15,7 @@ namespace RuntimeDeveloperConsole {
             Debug.Log("Initialising Console Database");
             System.Diagnostics.Stopwatch perfTimer = new System.Diagnostics.Stopwatch();
             perfTimer.Start();
-            registeredCommands = new Dictionary<string, MethodInfo>();
+            registeredCommands = new SortedDictionary<string, MethodInfo>();
 
             var currentAssembly = Assembly.GetExecutingAssembly();
             var methods = currentAssembly.GetTypes()
@@ -42,7 +42,7 @@ namespace RuntimeDeveloperConsole {
             var methodArgs = methodInfo.GetParameters();
             if (methodArgs == null || methodArgs.Length <= 0)
             {
-                methodInfo.Invoke(null, null);
+                result = methodInfo.Invoke(null, null);
             }
             else if(methodArgs.Length == 1)
             {
@@ -59,6 +59,7 @@ namespace RuntimeDeveloperConsole {
 
         public static string GetAvailableCommandsHelp(string[] filter)
         {
+
             string text = "-- Help --\n";
             if (filter == null || filter.Length <= 0)
             {
@@ -71,7 +72,7 @@ namespace RuntimeDeveloperConsole {
             }
             else if (filter.Length == 1)
             {
-                if (registeredCommands.ContainsKey(filter[0]))
+                if (!registeredCommands.ContainsKey(filter[0]))
                     return ConsoleConstants.COMMAND_NOT_FOUND;
                 else
                 {
