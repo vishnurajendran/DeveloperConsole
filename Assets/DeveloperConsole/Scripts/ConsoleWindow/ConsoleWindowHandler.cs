@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -37,7 +36,7 @@ namespace RuntimeDeveloperConsole {
                 eventCamera = Camera.main;
 
             if(EventSystem.current == null)
-                new GameObject("Event System").AddComponent<EventSystem>()
+                new GameObject("Event System").AddComponent<EventSystem>().gameObject
                                               .AddComponent<StandaloneInputModule>();
 
             panelParent.gameObject.SetActive(false);

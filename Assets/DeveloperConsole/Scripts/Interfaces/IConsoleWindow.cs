@@ -2,6 +2,8 @@ namespace RuntimeDeveloperConsole
 {
     public interface IConsoleWindow
     {
+        public bool IsOpen { get; }
+
         /// <summary>
         /// returns full console output
         /// </summary>

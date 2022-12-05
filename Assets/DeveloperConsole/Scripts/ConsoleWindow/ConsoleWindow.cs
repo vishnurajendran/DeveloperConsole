@@ -23,8 +23,13 @@ namespace RuntimeDeveloperConsole
         private int commandStackPointer = 0;
         private List<string> commandStack;
 
+        private ConsoleWindowHandler windowHandler;
+
+        public bool IsOpen => windowHandler.IsOpen;
+
         private void Start()
         {
+            windowHandler = GetComponent<ConsoleWindowHandler>();
             commandStack = new List<string>();
             inputField.onSubmit.AddListener(SubmitCommand);
             ConsoleSystem.SetConsoleWindow(this);

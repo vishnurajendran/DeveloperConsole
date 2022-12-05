@@ -64,7 +64,7 @@ namespace RuntimeDeveloperConsole {
             {
                 foreach (var kv in registeredCommands)
                 {
-                    var attrib = kv.Value.GetAttribute<ConsoleCommandAttribute>();
+                    var attrib = kv.Value.GetCustomAttribute<ConsoleCommandAttribute>();
                     text += $"{kv.Key}\n\tDesc: {attrib.Description}\n\tUsage: {attrib.ArgHelpText}\n";
                 }
                 return text;
@@ -76,7 +76,7 @@ namespace RuntimeDeveloperConsole {
                 else
                 {
                     var cmd = registeredCommands[filter[0]];
-                    var attrib = cmd.GetAttribute<ConsoleCommandAttribute>();
+                    var attrib = cmd.GetCustomAttribute<ConsoleCommandAttribute>();
                     return $"{cmd.Name.ToLower()}\n\tDesc: {attrib.Description}\n\tUsage:{attrib.ArgHelpText}\n";
                 }
             }
