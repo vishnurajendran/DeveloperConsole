@@ -2,6 +2,10 @@
  A simple developer console for unity
 
 ![](https://github.com/vishnurajendran/DeveloperConsole/blob/main/devconsole.png)
+## Features
+ - Simple registration syntax
+ - Suggestion and AutoComplete
+ - Logging
 
 ## Installation
  - Downlad and import the unity package.
