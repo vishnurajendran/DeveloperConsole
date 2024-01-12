@@ -9,7 +9,7 @@ namespace RuntimeDeveloperConsole
         public string[] Arguments;
     }
 
-    public class ConsoleSystem
+    public static class ConsoleSystem
     {
         private static IConsoleWindow consoleWindow;
         public static void SetConsoleWindow(IConsoleWindow console)
@@ -57,7 +57,7 @@ namespace RuntimeDeveloperConsole
                 return;
             }
 
-            foreach(string cmd in commandString.Split(ConsoleConstants.COMMAND_SEPERATOR))
+            foreach(string cmd in commandString.Split(ConsoleConstants.COMMAND_SEPARATOR))
             {
                 ExecuteCommand(Parse(cmd));
             }
@@ -69,7 +69,7 @@ namespace RuntimeDeveloperConsole
                 return default;
 
             ConsoleCommand command = new ConsoleCommand();
-            var components = commandString.Split(ConsoleConstants.COMMAND_COMPONENT_SEPERATOR);
+            var components = commandString.Split(ConsoleConstants.COMMAND_COMPONENT_SEPARATOR);
             command.Command = components[0];
             
             List<string> args = new List<string>();

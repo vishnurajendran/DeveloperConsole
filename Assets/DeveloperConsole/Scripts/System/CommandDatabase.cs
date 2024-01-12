@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
+using System.Linq;
 using UnityEngine;
 
 namespace RuntimeDeveloperConsole {
-    public class CommandDatabase
+    public static class CommandDatabase
     {
         private static SortedDictionary<string, MethodInfo> registeredCommands;
         private static HashSet<string> commandHash;

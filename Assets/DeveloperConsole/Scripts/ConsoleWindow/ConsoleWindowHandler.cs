@@ -83,7 +83,7 @@ namespace RuntimeDeveloperConsole {
         }
 
         //Dragging
-        private void OnDrag(PointerEventData data)
+        private void OnDrag(PointerEventData data) 
         {
             panelParent.anchoredPosition += data.delta / canvas.scaleFactor;
         }

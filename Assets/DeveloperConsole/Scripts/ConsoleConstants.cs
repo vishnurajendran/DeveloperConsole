@@ -11,8 +11,8 @@ namespace RuntimeDeveloperConsole
         public const string COMMAND_NOT_FOUND = "Could not find specified command";
 
         public const string TERM_KEY = ">> ";
-        public const string COMMAND_COMPONENT_SEPERATOR = " ";
-        public const string COMMAND_SEPERATOR = ";";
+        public const string COMMAND_COMPONENT_SEPARATOR = " ";
+        public const string COMMAND_SEPARATOR = ";";
 
         public const string TOO_MANY_ARGS_TEXT = "Too many arguments provided than specified";
         public const string TOO_FEW_ARGS_TEXT = "Too few arguments provided than specified";
