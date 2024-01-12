@@ -15,7 +15,7 @@
  - Make a static function that takes a string[] parameter
  - Add the [ConsoleCommand] attribute to it.
 
-###Example with return statement
+### Example with return statement
 ```
 [ConsoleCommand("description", "usage")]
 public static string myMethod(string[] args)
@@ -23,7 +23,7 @@ public static string myMethod(string[] args)
   return "myMethod Called";
 }
 ```
-###Example without return statement
+### Example without return statement
 ```
 [ConsoleCommand("description", "usage")]
 public static string myMethod(string[] args)
