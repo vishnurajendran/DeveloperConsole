@@ -26,7 +26,7 @@ public static string myMethod(string[] args)
 ### Example without return statement
 ```c#
 [ConsoleCommand("description", "usage")]
-public static string myMethod(string[] args)
+public static void myMethod(string[] args)
 {
   Debug.Log("myMethod called");
 }
