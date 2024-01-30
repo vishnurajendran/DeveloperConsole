@@ -60,6 +60,11 @@ namespace RuntimeDeveloperConsole
                 inputField.text = currentSuggestion;
                 OnInputfieldCarret();
             }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                inputField.text = string.Empty;
+                OnInputfieldCarret();
+            }
         }
 
         private void OnInputfieldCarret()
