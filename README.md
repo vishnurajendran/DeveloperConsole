@@ -8,7 +8,7 @@
  - Logging
 
 ## Installation
- - Downlad and import the unity package.
+ - Download and import the unity package.
  - Drag and drop the DevConsole prefab into your scene
 
 ## Add Commands
